@@ -1,27 +1,19 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
 .grid {
-  background: black;
   color: white;
   display: grid;
   gap: 5px;
-  width: 100%;
-  height: 250vh;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(4, 100px);
-  place-content: end center;
+  grid-template-columns: min-content max-content;
+  grid-auto-rows: 100px;
+  margin-bottom: 30px;
 }
 
-.header {
-  background-color: hotpink;
+.item:nth-child(odd) {
+  background-color: #2ecc71;
 }
-
-.content {
-  background-color: chocolate;
-}
-
-.nav {
-  background-color: navajowhite;
-}
-
-.footer {
-  background-color: forestgreen;
+.item:nth-child(even) {
+  background-color: #3498db;
 }
