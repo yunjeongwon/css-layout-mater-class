@@ -1,0 +1,101 @@
+@import 'reset.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 48px;
+  color: black;
+  background-color: white;
+  nav {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-size: 30px;
+    letter-spacing: -1px;
+    text-transform: lowercase;
+    cursor: pointer;
+    a {
+      padding: 10px 80px 10px 10px;
+      text-decoration: none;
+      color: black;
+    }
+    span {
+      padding: 10px 50px 10px 0px;
+    }
+    .left-panel {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      align-items: center;
+      &:hover {
+        background-color: gainsboro;
+      }
+      a {
+        &:hover {
+          color: white;
+        }
+        &:hover + .menu-about {
+          span {
+            color: black;
+          }
+        }
+      }
+      .menu-about {
+        padding: 10px 0px;
+        &:hover {
+          span {
+            color: white;
+          }
+        }
+      }
+      span {
+        color: gainsboro;
+      }
+    }
+    .right-panel {
+      display: flex;
+      align-items: center;
+      &:hover {
+        background-color: gainsboro;
+      }
+      a {
+        padding: 10px 50px 10px 10px;
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 42vh;
+  article {
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: minmax(0, 10fr) 0.8fr;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      padding-left: 10px;
+      h3 {
+        font-size: 14px;
+      }
+    }
+  }
+}
