@@ -1,10 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|PT+Serif:400,400i&display=swap');
 @import 'reset.scss';
+@import '_elements.scss';
+@import '_vaiables.scss';
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'PT Serif', serif;
   height: 100vh;
+  padding: 46px;
+  color: #444444;
+}
+
+header {
+  h1 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}
+
+.works {
+  margin-top: 150px;
+  .works__header {
+    @extend %grid;
+    margin-bottom: 10px;
+    span {
+      @extend %tinyTitle;
+    }
+  }
+  .works__list {
+    .works__work {
+      @extend %grid;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 30px 0px 18px 0px;
+      border-top: 1px solid #444444;
+      &:hover {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.cv, .about {
+  margin-top: 80px;
+  font-size: 30px;
+  line-height: 1.4;
+  span {
+    @extend %tinyTitle;
+  }
+  a {
+    color: #444444;
+    &:hover {
+      font-style: italic;
+    }
+  }
 }
